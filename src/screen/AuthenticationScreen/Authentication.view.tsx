@@ -1,13 +1,17 @@
 import React from 'react';
 import {Container, ImageRow} from './Authentication.style';
 import {AuthenticationProps} from './Authentication.props';
-import {ActivityIndicator, Text, TextInput} from 'react-native-paper';
-import {FlatList} from 'react-native';
+import {ActivityIndicator, Text, Button} from 'react-native-paper';
 
 const AuthenticationScreen = (props: AuthenticationProps) => {
-  const {} = props;
+  const {onNavigateToSettings} = props;
 
-  return <Container></Container>;
+  return (
+    <Container>
+      <Text>Set Authentication to Proceed</Text>
+      <Button onPress={onNavigateToSettings}>Go to Settings</Button>
+    </Container>
+  );
 };
 
 export default AuthenticationScreen;
