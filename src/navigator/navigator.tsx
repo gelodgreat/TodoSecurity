@@ -19,11 +19,16 @@ const DefaultStack = () => {
         }>
         {isAuthenticated.success ? (
           //handling of stack navigation when user is authenticated
-          <Stack.Screen name={HOME_SCREEN} component={HomeContainer} />
+          <Stack.Screen
+            name={HOME_SCREEN}
+            component={HomeContainer}
+            options={{headerTitle: 'Notes'}}
+          />
         ) : (
           <Stack.Screen
             name={AUTHENTICATION_SCREEN}
             component={AuthenticationContainer}
+            options={{headerTitle: 'Authenticate'}}
           />
         )}
       </Stack.Navigator>
