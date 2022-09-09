@@ -4,19 +4,20 @@ import {
   authenticateAsync,
   supportedAuthenticationTypesAsync,
 } from 'expo-local-authentication';
+import {Platform} from 'react-native';
 
 export const biometricsAuth = async (hasAuthenticated: boolean) => {
-  // const compatible = await hasHardwareAsync();
+  const compatible = await hasHardwareAsync();
   if (!hasAuthenticated) {
     const supported = await supportedAuthenticationTypesAsync();
     console.log(supported);
 
-    // if (!compatible) {
+    // if (!compatible && Platform.OS === 'ios') {
     //   throw 'Device not compatible for biometric authentication';
     // }
 
     // const enrolled = await isEnrolledAsync();
-    // if (!enrolled) {
+    // if (!enrolled && Platform.OS === 'ios') {
     //   throw "Device doesn't have biometric authentication enabled";
     // }
 
