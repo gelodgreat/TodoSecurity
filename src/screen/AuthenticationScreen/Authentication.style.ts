@@ -6,11 +6,3 @@ export const Container = styled.View`
   align-content: center;
   justify-content: center;
 `;
-
-export const ImageRow = styled.TouchableOpacity`
-  padding: 8px;
-  border: 1px solid black;
-  border-radius: 8px;
-  margin: 8px 0px;
-  flex-direction: row;
-`;

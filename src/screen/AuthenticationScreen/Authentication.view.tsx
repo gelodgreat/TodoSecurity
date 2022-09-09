@@ -1,8 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Container, ImageRow} from './Authentication.style';
+import {Container} from './Authentication.style';
 import {AuthenticationProps} from './Authentication.props';
-import {ActivityIndicator, Text, Button} from 'react-native-paper';
+import {Text, Button} from 'react-native-paper';
 
 const AuthenticationScreen = (props: AuthenticationProps) => {
   const {onNavigateToSettings, authenticate} = props;

@@ -1,13 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {
-  Container,
-  ImageRow,
-  InputContainer,
-  Input,
-  AddBtn,
-  RowItem,
-} from './Home.style';
+import {Container, InputContainer, Input, AddBtn, RowItem} from './Home.style';
 import {HomeProps} from './Home.props';
 import {FlatList, TouchableOpacity} from 'react-native';
 import {Notes} from 'types/Notes';

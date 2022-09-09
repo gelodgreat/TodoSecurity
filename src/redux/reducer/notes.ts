@@ -42,7 +42,7 @@ export const NotesReducer = (
     case 'LOAD_NOTES_FAILURE':
       return {...state, error: action.payload, isLoading: false};
     case 'UPDATE_NOTES_RESULT': {
-      return {...state, images: action.notes};
+      return {...state, notes: action.notes};
     }
     case 'CLEAR_NOTES_LIST': {
       return {};
