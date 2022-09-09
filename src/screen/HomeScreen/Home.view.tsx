@@ -9,10 +9,9 @@ import {
   RowItem,
 } from './Home.style';
 import {HomeProps} from './Home.props';
-import {FlatList} from 'react-native';
+import {FlatList, TouchableOpacity} from 'react-native';
 import {Notes} from 'types/Notes';
 import {Button, Text} from 'react-native-paper';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const HomeScreen = (props: HomeProps) => {
   const {
