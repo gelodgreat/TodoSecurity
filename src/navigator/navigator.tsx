@@ -1,45 +1,28 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import HomeContainer from '../screen/HomeScreen/Home.container';
 import AuthenticationContainer from '../screen/AuthenticationScreen/Authentication.container';
-import {
-  hasHardwareAsync,
-  isEnrolledAsync,
-  authenticateAsync,
-} from 'expo-local-authentication';
-
+import {useSelector} from 'react-redux';
+import {StoreType} from 'types/Store';
+import {AUTHENTICATION_SCREEN, HOME_SCREEN} from 'const/navigation';
 const Stack = createNativeStackNavigator();
 
 const DefaultStack = () => {
-  const isAuthenticated = false;
-  const biometricsAuth = async () => {
-    const compatible = await hasHardwareAsync();
-    if (!compatible) {
-      throw 'This device is not compatible for biometric authentication';
-    }
-    const enrolled = await isEnrolledAsync();
-    if (!enrolled) {
-      throw "This device doesn't have biometric authentication enabled";
-    }
-    const result = await authenticateAsync();
-    if (!result.success) {
-      throw `${result.error} - Authentication unsuccessful`;
-    }
-    return;
-  };
-  useEffect(() => {
-    biometricsAuth();
-  }, []);
+  const isAuthenticated = useSelector((state: StoreType) => state.user); //checking of response if authenticated
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        {isAuthenticated ? (
-          <Stack.Screen name="Home" component={HomeContainer} />
+      <Stack.Navigator
+        initialRouteName={
+          isAuthenticated.success ? HOME_SCREEN : AUTHENTICATION_SCREEN
+        }>
+        {isAuthenticated.success ? (
+          //handling of stack navigation when user is authenticated
+          <Stack.Screen name={HOME_SCREEN} component={HomeContainer} />
         ) : (
           <Stack.Screen
-            name="Authentication"
+            name={AUTHENTICATION_SCREEN}
             component={AuthenticationContainer}
           />
         )}

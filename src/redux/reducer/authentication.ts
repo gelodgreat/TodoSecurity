@@ -1,6 +1,9 @@
 export const currentUserAuth = (
   state = {
-    user: {},
+    user: {
+      loading: true,
+      success: false,
+    },
     loading: true,
   },
   action: any,
