@@ -15,3 +15,10 @@ My Works, please check them out
 1. [Github Page](https://github.com/gelodgreat)
 2. [Portfolio](https://angelodev.web.app/)
 3. [Playstore app releases](https://play.google.com/store/apps/dev?id=6473859083520963966&hl=en&gl=US)
+
+
+![image](https://user-images.githubusercontent.com/20021423/189375269-7a40c2ed-bf52-4389-a0ae-167101c8c8a4.png)
+
+![image](https://user-images.githubusercontent.com/20021423/189375502-bb58f193-c2fa-4eea-93d4-6a8fd870251a.png)
+
+![image](https://user-images.githubusercontent.com/20021423/189375527-0abf9c2b-2c10-4a3f-beca-2626fbade503.png)
