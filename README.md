@@ -12,6 +12,6 @@ How to run:
 
 
 My Works, please check them out 
-[Github Page](https://github.com/gelodgreat)
-[Portfolio](https://angelodev.web.app/)
-[Playstore app releases](https://play.google.com/store/apps/dev?id=6473859083520963966&hl=en&gl=US)
+1. [Github Page](https://github.com/gelodgreat)
+2. [Portfolio](https://angelodev.web.app/)
+3. [Playstore app releases](https://play.google.com/store/apps/dev?id=6473859083520963966&hl=en&gl=US)
